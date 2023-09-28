@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/formulario_visita.css') }}">
+</head>
+
+<body>
+
+    <h1 class="titulo1">Cadastro para visitação</h1>
+    <p class="titulo2">Nos conte um pouco sobre você ou o grupo de pessoas que deseja nos visitar!</p>
+    <br>
+
+    <div class="pop">
+        <form>
+            <div class="logodiv">
+                <img src="{{ url_for('static', filename='img/logocpt.png') }}">
+            </div>
+
+            <fieldset class="nome">
+                <div class="form-group">
+                    <input type="text" name="nome" id="nome" required>
+                    <label for="nome" class="floating-label">Nome</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="sobrenome" id="sobrenome" required>
+                    <label for="sobrenome" class="floating-label">Sobrenome</label>
+                </div>
+            </fieldset>
+            
+
+            <div class="genero">
+                <label>Gênero: </label>
+                <label>
+                    <input type="radio" name="genero" value="h">Homem
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="m">Mulher
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="g_outros">Outros
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="g_ni">Prefiro não informar
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label class="sr-only">E-mail</label>
+                <input type="email" name="email" id="email" required>
+                <label for="email" class="floating-label">E-mail</label>
+            </div>
+
+            <div>
+                <fieldset class="fone">
+                    <div class="form-group">
+                        <label class="sr-only">DDD</label>
+                        <input type="tel" name="ddd" id="ddd">
+                        <label for="ddd" class="floating-label">DDD</label>
+                        <label class="sr-only">Telefone</label>
+                        <input type="tel" name="fone" id="fone" required>
+                        <label for="fone" class="floating-label">Telefone</label>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <div class="form-group">
+                <label class="sr-only">Instituição</label>
+                <input type="text" name="instituicao" id="instituicao">
+                <label for="instituicao" class="floating-label">Instituição</label>
+            </div>
+
+
+            <div class="form-group">
+                <label>Por onde você conheceu o Projeto CPT?</label><br>
+                <input type="checkbox" id="por_rede" name="por_rede" value="rede">
+                <label for="por_rede">Redes sociais</label>
+                <input type="checkbox" id="por_folheto" name="por_folheto" value="folheto">
+                <label for="por_folheto">Folheto/cartaz/revista</label>
+                <input type="checkbox" id="por_amigo" name="por_amigo" value="amigo">
+                <label for="por_amigo">Amigos</label>
+                <input type="checkbox" id="por_outros" name="por_outros" value="outros">
+                <label for="por_rede">Outros</label>
+            </div>
+            <div class="exp">
+                <label>Conte-nos um pouco sobre seu interesse em nos visitar para que possamos lhe proporcionar uma
+                        experiência personalizada:</label><br>
+                <textarea rows="10" id="informacoes" name="informacoes"></textarea>
+            </div>
+        </form>
+        <button type="submit" class="botao">Concluído</button>
+    </div>
+    </div>
+</body>
+
+</html>
